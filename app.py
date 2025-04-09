@@ -75,8 +75,6 @@ if prompt := st.chat_input("Type your question..."):
 
             response = model.generate_content(full_prompt)
             reply = response.text
-
-            print(full_prompt)
             st.session_state.chat_history.append(("assistant", reply))
             st.chat_message("assistant").markdown(reply)
 
